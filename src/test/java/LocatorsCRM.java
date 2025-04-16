@@ -12,6 +12,7 @@ public class LocatorsCRM {
     public String checkRemeberMe = "//label[normalize-space()='Remember me']";
     public String LoginButton ="//button[contains(@class,'btn')]";
     public String ForgetPassword = "//a[starts-with(normalize-space(),'Forgot')]";
+
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Login CRM");
         System.out.println("======================================");
@@ -39,6 +40,13 @@ public class LocatorsCRM {
 //        driver.quit();
 
         //Click Button to Submit
-        driver
+        driver.findElement(By.xpath(locatorsCRM.LoginButton)).click();
+        Thread.sleep(3000);
+
+        //Trang CRM
+
+
+        driver.quit();
+
     }
 }
